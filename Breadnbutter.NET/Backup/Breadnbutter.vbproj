@@ -1,0 +1,1064 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A36966FE-4A96-4FD3-80C7-BF2EBBBE66A3}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>Breadnbutter</AssemblyName>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Breadnbutter.MMain</StartupObject>
+    <AssemblyMajorVersion>4</AssemblyMajorVersion>
+    <AssemblyMinorVersion>0</AssemblyMinorVersion>
+    <AssemblyRevisionNumber>100</AssemblyRevisionNumber>
+    <GenerateRevisionNumber>True</GenerateRevisionNumber>
+    <AssemblyCompanyName>Hawkins Research, Inc.</AssemblyCompanyName>
+    <StartWithIE>False</StartWithIE>
+    <ApplicationIcon>Breadnbutter.ico</ApplicationIcon>
+    <RootNamespace>Breadnbutter</RootNamespace>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>.\bin\</OutputPath>
+    <DocumentationFile>Breadnbutter.xml</DocumentationFile>
+    <DebugSymbols>True</DebugSymbols>
+    <DefineDebug>True</DefineDebug>
+    <DefineTrace>True</DefineTrace>
+    <DefineConstants>Win32=True</DefineConstants>
+    <PlatformTarget>x86</PlatformTarget>
+    <NoWarn>42016,42017,42018,42019,42032</NoWarn>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>.\bin\</OutputPath>
+    <DocumentationFile>Breadnbutter.xml</DocumentationFile>
+    <DebugSymbols>False</DebugSymbols>
+    <DefineDebug>False</DefineDebug>
+    <DefineTrace>True</DefineTrace>
+    <DefineConstants>Win32=True</DefineConstants>
+    <PlatformTarget>x86</PlatformTarget>
+    <NoWarn>42016,42017,42018,42019,42032</NoWarn>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxDTPickerArray">
+      <Name>AxDTPickerArray</Name>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.Compatibility">
+      <Name>Microsoft.VisualBasic.Compatibility</Name>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.Compatibility.Data">
+      <Name>Microsoft.VisualBasic.Compatibility.Data</Name>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.XML">
+      <Name>System.XML</Name>
+    </Reference>
+    <COMReference Include="ActiveScroll">
+      <Guid>{9CD56991-2E37-11D2-8C87-00104B9E072A}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>3</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="ActiveToolBars">
+      <Guid>{1BE65FA0-CBF9-11D2-BBC7-00104B9E0792}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="ADODB">
+      <Guid>{EF53050B-882E-4776-B643-EDA472E8E3F2}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <WrapperTool>primary</WrapperTool>
+    </COMReference>
+    <COMReference Include="AxActiveScroll">
+      <Guid>{9CD56991-2E37-11D2-8C87-00104B9E072A}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>3</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>aximp</WrapperTool>
+    </COMReference>
+    <COMReference Include="AxActiveToolBars">
+      <Guid>{1BE65FA0-CBF9-11D2-BBC7-00104B9E0792}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>aximp</WrapperTool>
+    </COMReference>
+    <COMReference Include="AxBBLISTVIEWLib">
+      <Guid>{93F12E20-C696-11D1-A280-0000C07B4E8D}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <WrapperTool>aximp</WrapperTool>
+    </COMReference>
+    <COMReference Include="AxDwsbcLib">
+      <Guid>{B5089F43-6EDC-101C-B41C-00AA0036005A}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>4</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>aximp</WrapperTool>
+    </COMReference>
+    <COMReference Include="AxGTMaskDate">
+      <Guid>{AB3877A8-B7B2-11CF-9097-444553540000}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>aximp</WrapperTool>
+    </COMReference>
+    <COMReference Include="AxGTMaskNum">
+      <Guid>{667E8C40-F9B5-11CF-90AB-444553540000}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>aximp</WrapperTool>
+    </COMReference>
+    <COMReference Include="AxGTMaskText">
+      <Guid>{AE34E620-D33A-11CF-907D-444553540000}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>aximp</WrapperTool>
+    </COMReference>
+    <COMReference Include="AxMSACAL">
+      <Guid>{8E27C92E-1264-101C-8A2F-040224009C02}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>7</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>aximp</WrapperTool>
+    </COMReference>
+    <COMReference Include="AxMSChart20Lib">
+      <Guid>{65E121D4-0C60-11D2-A9FC-0000F8754DA1}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>aximp</WrapperTool>
+    </COMReference>
+    <COMReference Include="AxMSComCtl2">
+      <Guid>{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>aximp</WrapperTool>
+    </COMReference>
+    <COMReference Include="AxMSHierarchicalFlexGridLib">
+      <Guid>{0ECD9B60-23AA-11D0-B351-00A0C9055D8E}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>6</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>aximp</WrapperTool>
+    </COMReference>
+    <COMReference Include="AxMSMAPI">
+      <Guid>{20C62CAE-15DA-101B-B9A8-444553540000}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <WrapperTool>aximp</WrapperTool>
+    </COMReference>
+    <COMReference Include="AxSSDataWidgets_B">
+      <Guid>{8D650141-6025-11D1-BC40-0000C042AEC0}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>3</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>aximp</WrapperTool>
+    </COMReference>
+    <COMReference Include="AxSSDataWidgets_B_OLEDB">
+      <Guid>{4A4AA691-3E6F-11D2-822F-00104B9E07A1}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>3</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>aximp</WrapperTool>
+    </COMReference>
+    <COMReference Include="AxTDBDate6">
+      <Guid>{A49CE0E0-C0F9-11D2-B0EA-00A024695830}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>aximp</WrapperTool>
+    </COMReference>
+    <COMReference Include="AxTDBMask6">
+      <Guid>{66A90C01-346D-11D2-9BC0-00A024695830}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>aximp</WrapperTool>
+    </COMReference>
+    <COMReference Include="AxTDBNumber6">
+      <Guid>{49CBFCC0-1337-11D2-9BBF-00A024695830}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>aximp</WrapperTool>
+    </COMReference>
+    <COMReference Include="AxTDBTime6">
+      <Guid>{66A5AC41-25A9-11D2-9BBF-00A024695830}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>aximp</WrapperTool>
+    </COMReference>
+    <COMReference Include="AxThreed">
+      <Guid>{065E6FD1-1BF9-11D2-BAE8-00104B9E0792}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>3</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>aximp</WrapperTool>
+    </COMReference>
+    <COMReference Include="AxTx4oleLib">
+      <Guid>{3D6D5D32-B9F2-101C-AED5-00608CF525A5}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <WrapperTool>aximp</WrapperTool>
+    </COMReference>
+    <COMReference Include="AxVSSPELL6Lib">
+      <Guid>{08769121-33BD-11D3-BD95-B44CFE3A3C4B}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>aximp</WrapperTool>
+    </COMReference>
+    <COMReference Include="BBLISTVIEWLib">
+      <Guid>{93F12E20-C696-11D1-A280-0000C07B4E8D}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="CDlgComp">
+      <Guid>{DC9B5239-6740-11D2-968A-00C0F015DFBA}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="DDActiveReports">
+      <Guid>{82282823-C017-11D0-A87C-00A0C90F29FC}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="DwsbcLib">
+      <Guid>{B5089F43-6EDC-101C-B41C-00AA0036005A}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>4</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="GTMaskDate">
+      <Guid>{AB3877A8-B7B2-11CF-9097-444553540000}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="GTMaskNum">
+      <Guid>{667E8C40-F9B5-11CF-90AB-444553540000}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="GTMaskText">
+      <Guid>{AE34E620-D33A-11CF-907D-444553540000}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Outlook">
+      <Guid>{00062FFF-0000-0000-C000-000000000046}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>9</VersionMajor>
+      <VersionMinor>2</VersionMinor>
+      <WrapperTool>primary</WrapperTool>
+    </COMReference>
+    <COMReference Include="Microsoft.StdFormat">
+      <Guid>{6B263850-900B-11D0-9484-00A0C91110ED}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>primary</WrapperTool>
+    </COMReference>
+    <COMReference Include="MSACAL">
+      <Guid>{8E27C92E-1264-101C-8A2F-040224009C02}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>7</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="MSAdodcLib">
+      <Guid>{67397AA1-7FB1-11D0-B148-00A0C922E820}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>6</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="MSChart20Lib">
+      <Guid>{65E121D4-0C60-11D2-A9FC-0000F8754DA1}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="MSComCtl2">
+      <Guid>{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="MSDATASRC">
+      <Guid>{7C0FFAB0-CD84-11D0-949A-00A0C91110ED}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>primary</WrapperTool>
+    </COMReference>
+    <COMReference Include="MSHierarchicalFlexGridLib">
+      <Guid>{0ECD9B60-23AA-11D0-B351-00A0C9055D8E}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>6</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="MSMAPI">
+      <Guid>{20C62CAE-15DA-101B-B9A8-444553540000}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="office">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <WrapperTool>primary</WrapperTool>
+    </COMReference>
+    <COMReference Include="Scripting">
+      <Guid>{420B2830-E718-11CF-893D-00A0C9054228}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="SKCLLib">
+      <Guid>{F83FB95C-D981-11D2-A80A-00104BF191A4}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="SSDataWidgets_B">
+      <Guid>{8D650141-6025-11D1-BC40-0000C042AEC0}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>3</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="SSDataWidgets_B_OLEDB">
+      <Guid>{4A4AA691-3E6F-11D2-822F-00104B9E07A1}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>3</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>primary</WrapperTool>
+    </COMReference>
+    <COMReference Include="StdType">
+      <Guid>{BEF6E001-A874-101A-8BBA-00AA00300CAB}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="SWKEYSRVLib">
+      <Guid>{6BBD2D4A-0DB4-11D2-90A1-00E0290EE0FD}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="TDBDate6">
+      <Guid>{A49CE0E0-C0F9-11D2-B0EA-00A024695830}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="TDBMask6">
+      <Guid>{66A90C01-346D-11D2-9BC0-00A024695830}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="TDBNumber6">
+      <Guid>{49CBFCC0-1337-11D2-9BBF-00A024695830}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="TDBTime6">
+      <Guid>{66A5AC41-25A9-11D2-9BBF-00A024695830}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="Threed">
+      <Guid>{065E6FD1-1BF9-11D2-BAE8-00104B9E0792}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>3</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="Tx4oleLib">
+      <Guid>{3D6D5D32-B9F2-101C-AED5-00608CF525A5}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="VBPrnDlgLib">
+      <Guid>{8620B873-D801-11D2-AC47-00600832A1F6}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="VSSPELL6Lib">
+      <Guid>{08769121-33BD-11D3-BD95-B44CFE3A3C4B}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="Microsoft.VisualBasic.Compatibility" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.vb" />
+    <Compile Include="CbbListView.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CBranch.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CBranchData.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CBranchs.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CComboSearch.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CCompany.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CCompanyData.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CCompanys.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CContact.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CContactData.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CContactList.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CContacts.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CContactStack.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CDailyItem.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CDailySubItem.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CDBOps.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CEmployee.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CEmployeeData.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CEmployees.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CErrorMgr.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CEvent.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CEventData.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CEvents.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CFileOps.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CFormControl.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CFormData.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CFormMgr.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CGroupList.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CGroupListData.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CGroupListDatas.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CGroupListLink.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CGroupListLinkData.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CInputNumber.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsPrintLV.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CProduct.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CProductData.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CProducts.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CReport.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CTextSearch.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CTrayHook.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CUser.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FActivity.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FActivity.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FActivity.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAssignContact.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FAssignContact.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FAssignContact.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAuthLog.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FAuthLog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FAuthLog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FBranch.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FBranch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FBranch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCallStats.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FCallStats.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FCallStats.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FChangeCompany.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FChangeCompany.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FChangeCompany.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FChooseGroup.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FChooseGroup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FChooseGroup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCompany2.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FCompany2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FCompany2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FContact.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FContact.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FContact.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FDailyReports.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FDailyReports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FDailyReports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDatePick.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FDatePick.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FDatePick.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDetails.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FEditDetail.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FEditDetail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FEditDetail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FEmployeeLog.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FEmployeeLog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FEmployeeLog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FEmployeeMgt.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FEmployeeMgt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FEmployeeMgt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FHistory.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FHours.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FHours.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FHours.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLicense.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FLicense.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FLicense.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLogon.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FLogon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FLogon.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMain.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FNote.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FNote.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FNote.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FOutlookAppt.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FOutlookAppt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FOutlookAppt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPrefs.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FPrefs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FPrefs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPricing.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FPricing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FPricing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPrinterSelect.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FPrinterSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FPrinterSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPrintLabels.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FPrintLabels.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FPrintLabels.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FProspectMgt.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FProspectMgt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FProspectMgt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FReport.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FResult.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FResult.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FResult.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMulitGroup.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmMulitGroup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMulitGroup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSelect.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSelectDB.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FSelectDB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FSelectDB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSendTo.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FSendTo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FSendTo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSetPassword.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FSetPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FSetPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSingleLabel.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FSingleLabel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FSingleLabel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSupportLog.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FSupportLog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FSupportLog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSupportOpen.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FSupportOpen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FSupportOpen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FUser.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FUserGroups.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FUserGroups.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FUserGroups.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FUtility.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FUtility.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FUtility.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FVMail.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>FVMail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FVMail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MContactList.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MLicense.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MMain.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MReporter.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MUtility.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MVMail.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UpgradeSupport.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="FActivity.resX">
+      <DependentUpon>FActivity.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAssignContact.resX">
+      <DependentUpon>FAssignContact.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAuthLog.resX">
+      <DependentUpon>FAuthLog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FBranch.resX">
+      <DependentUpon>FBranch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCallStats.resX">
+      <DependentUpon>FCallStats.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FChangeCompany.resX">
+      <DependentUpon>FChangeCompany.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FChooseGroup.resX">
+      <DependentUpon>FChooseGroup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCompany2.resX">
+      <DependentUpon>FCompany2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FContact.resX">
+      <DependentUpon>FContact.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDailyReports.resX">
+      <DependentUpon>FDailyReports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDatePick.resX">
+      <DependentUpon>FDatePick.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDetails.resX">
+      <DependentUpon>FDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FEditDetail.resX">
+      <DependentUpon>FEditDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FEmployeeLog.resX">
+      <DependentUpon>FEmployeeLog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FEmployeeMgt.resX">
+      <DependentUpon>FEmployeeMgt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FHistory.resX">
+      <DependentUpon>FHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FHours.resX">
+      <DependentUpon>FHours.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLicense.resX">
+      <DependentUpon>FLicense.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLogon.resX">
+      <DependentUpon>FLogon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMain.resX">
+      <DependentUpon>FMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FNote.resX">
+      <DependentUpon>FNote.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOutlookAppt.resX">
+      <DependentUpon>FOutlookAppt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPrefs.resX">
+      <DependentUpon>FPrefs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPricing.resX">
+      <DependentUpon>FPricing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPrinterSelect.resX">
+      <DependentUpon>FPrinterSelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPrintLabels.resX">
+      <DependentUpon>FPrintLabels.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FProspectMgt.resX">
+      <DependentUpon>FProspectMgt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FReport.resX">
+      <DependentUpon>FReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FResult.resX">
+      <DependentUpon>FResult.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMulitGroup.resX">
+      <DependentUpon>frmMulitGroup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSelect.resX">
+      <DependentUpon>FSelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSelectDB.resX">
+      <DependentUpon>FSelectDB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSendTo.resX">
+      <DependentUpon>FSendTo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSetPassword.resX">
+      <DependentUpon>FSetPassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSingleLabel.resX">
+      <DependentUpon>FSingleLabel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSupportLog.resX">
+      <DependentUpon>FSupportLog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSupportOpen.resX">
+      <DependentUpon>FSupportOpen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUser.resX">
+      <DependentUpon>FUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUserGroups.resX">
+      <DependentUpon>FUserGroups.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUtility.resX">
+      <DependentUpon>FUtility.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FVMail.resX">
+      <DependentUpon>FVMail.vb</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AxDTPickerArray.dll" />
+    <None Include="RBRANCH.dsr" />
+    <None Include="RCALLLOG.dsr" />
+    <None Include="RCALLSANDNOTES.dsr" />
+    <None Include="RCUSTSTATUS.dsr" />
+    <None Include="RDAILY.dsr" />
+    <None Include="RDAILYBLANK.dsr" />
+    <None Include="RDAILYUNIT.dsr" />
+    <None Include="RDAYSLEFT.dsr" />
+    <None Include="RFEATUREREQUEST.dsr" />
+    <None Include="RHISTORY.dsr" />
+    <None Include="RLABELS.dsr" />
+    <None Include="RLASTUPDATED.dsr" />
+    <None Include="RSHIPPING.dsr" />
+    <None Include="RSIMPLECONTACT.dsr" />
+    <None Include="RWEEKLYCOMBO.dsr" />
+    <None Include="RWEEKLYEVALAUTHORIZATIONS.dsr" />
+    <None Include="RWEEKLYFIRSTDISKSHIPMENTS.dsr" />
+    <None Include="RWEEKLYSALES.dsr" />
+    <None Include="_UpgradeReport.htm">
+      <SubType>Preview</SubType>
+    </None>
+    <Content Include="Breadnbutter.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

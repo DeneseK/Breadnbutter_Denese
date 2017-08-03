@@ -1,0 +1,14 @@
+[History]
+B0=Breadnbutter/FLogon/txtPassword_KeyPress
+B1=Breadnbutter/FLogon/Submit
+B2=Breadnbutter/FLogon/SQLLogon
+B3=Breadnbutter/FLogon/cmdLog_Click
+B4=Breadnbutter/MUtility/DecryptStr
+B5=Breadnbutter/MMain/Rot39
+B6=Breadnbutter/FLogon/cmdContinue_Click
+B7=Breadnbutter/FDatePick/cmdSet_Click
+B8=Breadnbutter/FDatePick/Calendar1_DblClick
+B9=Breadnbutter/MLicense/InitLicense
+B10=Breadnbutter/MLicense/ValidateLicense
+B11=Breadnbutter/FMain/License_StatusChanged
+B12=Breadnbutter/FLicense/cmdAuthorize_Click
